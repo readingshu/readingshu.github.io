@@ -192,7 +192,8 @@ _config.yml: 博客的配置文件**）</p>
 Hexo s 启动hexo博客（在浏览器里输入localhost:4000即可查看博客）<br>
 <a target="_blank" rel="noopener" href="https://blog.csdn.net/xjm850552586/article/details/84101345?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param">往hexo中添加本地文件方法</a><br>
 
-<p><img src="/images/1.jpg"><br><br>Hexo n “文件名” （新建博客文章）<br><br>给文章增加内容建议直接使用sublime text 3打开，往里面添加内容<br><br>完成文章后退到blog层，<span style="color: red">cd ../..</span><br><br>hexo clean 清理hexo<br><br>hexo g 生成<br><br>hexo s 重新启动查看博客效果<br></p>
+<p><img src="/images/1.jpg"><br><br>Hexo n “文件名” （新建博客文章）<br><br>给文章增加内容建议直接使用sublime text 3打开，往里面添加内容<br><br>完成文章后退到blog层，<span style="color: red">cd ../..</span><br><br>hexo clean 清理hexo<br><br>hexo g 生成<br><br>hexo s 重新启动查看博客效果<br><br>ctrl+c断开服务<br></p>
+<p>5.开始将博客部署到github上去<br>进入github<br>点击new repository<br><img src="/images/2.png"><br>个人博客的仓库命名一定要是 昵称.github.io<br>cnpm install –save hexo-deployer-git 安装一个git部署的插件<br>使用Sublime text 3 打开_config.yml，在文件底部  type: git  下新增<br>  repo: ‘<a target="_blank" rel="noopener" href="https://github.com/readingshu/readingshu.github.io.git&#39;">https://github.com/readingshu/readingshu.github.io.git&#39;</a> （此处为个人github的仓库地址）<br>  branch: ‘master’<br>  保存后退出<br>开始部署到远端hexo d<br>（注：如果终端提示无法识别你是谁，则进入Git Bash Here中输入如下代码，<br>使你变得可以识别<br>$ git config user.name ‘github用户名’<br>$ git config user.email ‘邮箱’<br>）<br>填写你的github账号与密码，就可以推送到远端了<br><span style="color: red">更换博客主题</span><br>在blog目录下的themes主题下，复制粘贴github上的博客主题压缩包（因为使用clone太花时间了，而且还会失败）<br>将_config.yml文件中theme: landscape 更改成theme:主题文件夹<br>重新清理生成启动，即可</p>
 
       
 
